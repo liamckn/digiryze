@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Digiryze — Agence Web & SEO Marseille"
+version = "1.0.0"
+id = "artifacts/digiryze"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23381
+
+[services.development]
+run = "pnpm --filter @workspace/digiryze run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/digiryze", "run", "build" ]
+publicDir = "artifacts/digiryze/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23381"
+BASE_PATH = "/"
