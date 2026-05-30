@@ -8,7 +8,6 @@ import { WhyDigiryze } from "@/components/sections/WhyDigiryze";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { Portfolio } from "@/components/sections/Portfolio";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { Chatbot } from "@/components/ui/Chatbot";
 
@@ -21,7 +20,6 @@ export function Home() {
         <Hero />
         <Marquee />
         <Services />
-        <Portfolio />
         <WhyDigiryze />
         <Testimonials />
         <Process />
