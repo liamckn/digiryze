@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MonitorSmartphone, Search, Wrench } from "lucide-react";
+import { MonitorSmartphone, Search } from "lucide-react";
 
 export function Services() {
   const services = [
@@ -13,11 +13,6 @@ export function Services() {
       title: "Référencement SEO",
       description: "Optimisation Google My Business, balises SEO, annuaires locaux. Apparaissez en premier sur Google."
     },
-    {
-      icon: Wrench,
-      title: "Maintenance & suivi",
-      description: "Mises à jour, modifications, rapports mensuels. Votre site toujours au top."
-    }
   ];
 
   return (
