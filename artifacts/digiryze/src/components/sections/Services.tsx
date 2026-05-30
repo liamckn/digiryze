@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MonitorSmartphone, Search, Bot, Wrench } from "lucide-react";
+import { MonitorSmartphone, Search, Wrench } from "lucide-react";
 
 export function Services() {
   const services = [
@@ -12,11 +12,6 @@ export function Services() {
       icon: Search,
       title: "Référencement SEO",
       description: "Optimisation Google My Business, balises SEO, annuaires locaux. Apparaissez en premier sur Google."
-    },
-    {
-      icon: Bot,
-      title: "Agent IA 24h/24",
-      description: "Chatbot intelligent qui répond à vos clients à toute heure. Réservations, questions, urgences automatisées."
     },
     {
       icon: Wrench,
