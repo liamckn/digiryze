@@ -30,20 +30,6 @@ const testimonials = [
     rating: 5,
     text: "Mon ancienne agence prenait 3 semaines pour un simple changement. Digiryze livre en 48h et répond le jour même. C'est le jour et la nuit."
   },
-  {
-    name: "Céline R.",
-    role: "Coach sportive",
-    city: "Toulon",
-    rating: 5,
-    text: "Design magnifique, site ultra rapide, et le SEO a vraiment fonctionné. Je reçois maintenant des demandes de clients qui me trouvent sur Google chaque semaine."
-  },
-  {
-    name: "Marc T.",
-    role: "Électricien",
-    city: "Nice",
-    rating: 5,
-    text: "J'avais aucun site internet avant. En 2 jours j'en avais un professionnel. Les clients me disent souvent qu'ils m'ont trouvé sur Google — c'est top !"
-  }
 ];
 
 export function Testimonials() {
