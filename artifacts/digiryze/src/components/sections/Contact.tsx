@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { motion } from "framer-motion";
-import { Phone, MapPin, Clock, Send } from "lucide-react";
+import { Phone, MapPin, Clock, Send, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -73,6 +73,16 @@ export function Contact() {
                 <div>
                   <p className="text-sm text-muted-foreground">Appelez-nous directement</p>
                   <p className="text-xl font-bold text-foreground">06 51 81 31 16</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center text-primary">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Email</p>
+                  <a href="mailto:contact.digiryze@gmail.com" className="text-xl font-bold text-foreground hover:text-primary transition-colors" data-testid="link-email">contact.digiryze@gmail.com</a>
                 </div>
               </div>
 
