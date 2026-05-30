@@ -8,6 +8,7 @@ import { WhyDigiryze } from "@/components/sections/WhyDigiryze";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { Chatbot } from "@/components/ui/Chatbot";
 
 export function Home() {
   return (
@@ -24,6 +25,7 @@ export function Home() {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }
