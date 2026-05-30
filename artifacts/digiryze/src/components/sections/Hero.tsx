@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, Clock, ShieldCheck } from "lucide-react";
+import { Mail, Zap, Clock, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -33,14 +33,14 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="rounded-full px-8 h-14 text-base font-bold w-full sm:w-auto glow-hover transition-all" asChild data-testid="hero-cta-primary">
-              <a href="#contact">
-                Obtenir un devis gratuit <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
             <Button size="lg" variant="ghost" className="rounded-full px-8 h-14 text-base font-semibold w-full sm:w-auto hover:text-primary hover:bg-transparent" asChild data-testid="hero-cta-phone">
               <a href="tel:0651813116">
                 06 51 81 31 16 →
+              </a>
+            </Button>
+            <Button size="lg" variant="ghost" className="rounded-full px-8 h-14 text-base font-semibold w-full sm:w-auto hover:text-primary hover:bg-transparent" asChild data-testid="hero-cta-email">
+              <a href="mailto:contact.digiryze@gmail.com">
+                <Mail className="mr-2 h-5 w-5" /> contact.digiryze@gmail.com
               </a>
             </Button>
           </div>
