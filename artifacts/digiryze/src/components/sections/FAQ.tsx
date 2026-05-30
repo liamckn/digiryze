@@ -17,10 +17,6 @@ export function FAQ() {
       answer: "Oui, tous nos sites intègrent une base SEO solide (balises, structure, vitesse). Pour dominer Google, nous proposons également des forfaits SEO avancés mensuels (Google My Business, netlinking, création de contenu)."
     },
     {
-      question: "Quel est l'avantage de l'Agent IA 24h/24 ?",
-      answer: "Votre entreprise ne dort jamais. Le chatbot IA répond instantanément aux questions fréquentes de vos clients, prend des rendez-vous et qualifie les leads même à 3h du matin. Il est formé spécifiquement sur vos données."
-    },
-    {
       question: "Quels sont vos tarifs ?",
       answer: "Nos tarifs s'adaptent à vos besoins. De la landing page express au site e-commerce complexe avec SEO et IA. Demandez un devis gratuit, nous vous répondons sous 2h avec une proposition claire et sans surprise."
     }

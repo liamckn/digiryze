@@ -12,7 +12,7 @@ export function WhyDigiryze() {
     "Design sur mesure ultra-rapide et optimisé pour la conversion.",
     "SEO technique intégré dès la conception, pas après coup.",
     "Support réactif basé à Marseille, toujours disponible.",
-    "Technologies modernes (React, IA) pour un site qui dure."
+    "Technologies modernes pour des sites rapides, durables et sécurisés."
   ];
 
   return (

@@ -2,7 +2,7 @@ export function Marquee() {
   const items = [
     "Création de site web",
     "Référencement SEO",
-    "Agent IA 24h/24",
+    "Devis gratuit sous 24h",
     "Marseille & France entière",
     "Livraison 48h"
   ];

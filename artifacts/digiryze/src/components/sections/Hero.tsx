@@ -29,7 +29,7 @@ export function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Digiryze propulse votre activité locale. Conception sur mesure, référencement ultra-optimisé, et agents IA. On livre vite, on livre bien.
+            Digiryze propulse votre activité locale. Conception sur mesure et référencement ultra-optimisé. On livre vite, on livre bien.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
