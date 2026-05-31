@@ -1,21 +1,13 @@
 import { motion } from "framer-motion";
 import { Mail, Rocket, Clock, ShieldCheck, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { StarField } from "@/components/ui/StarField";
-
 export function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Starfield */}
-      <StarField />
-
-      {/* Cosmic grid */}
-      <div className="absolute inset-0 z-0 grid-bg opacity-40" />
-
-      {/* Nebula glow blobs */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[500px] bg-primary/15 rounded-full blur-[140px] mix-blend-screen animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[120px] mix-blend-screen animate-pulse" style={{ animationDelay: "2s" }} />
-      <div className="absolute top-1/2 right-1/3 w-[300px] h-[300px] rounded-full blur-[100px] mix-blend-screen animate-pulse" style={{ background: "rgba(236,72,153,0.12)", animationDelay: "4s" }} />
+      {/* Animated Background */}
+      <div className="absolute inset-0 z-0 grid-bg opacity-30" />
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[100px] mix-blend-screen animate-pulse" style={{ animationDelay: "2s" }} />
 
       <div className="container relative z-10 px-4 md:px-6 mx-auto flex flex-col items-center text-center">
         <motion.div
@@ -31,7 +23,7 @@ export function Hero() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.1] tracking-tighter mb-6 uppercase">
             <span className="block text-stroke opacity-40">VOTRE SITE EN</span>
-            <span className="block text-primary drop-shadow-[0_0_30px_rgba(168,85,247,0.6)]">48 HEURES</span>
+            <span className="block text-primary drop-shadow-[0_0_15px_rgba(0,255,136,0.3)]">48 HEURES</span>
             <span className="block">CHRONO.</span>
           </h1>
 

@@ -28,7 +28,7 @@ export function Process() {
                 transition={{ delay: index * 0.2 }}
                 className="relative bg-background p-6 rounded-2xl border border-border text-center z-10"
               >
-                <div className="w-16 h-16 mx-auto bg-primary text-primary-foreground font-display font-bold text-2xl rounded-full flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(168,85,247,0.4)]">
+                <div className="w-16 h-16 mx-auto bg-primary text-primary-foreground font-display font-bold text-2xl rounded-full flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(0,255,136,0.3)]">
                   {step.num}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>

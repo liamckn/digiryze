@@ -87,7 +87,7 @@ export function Pricing() {
               transition={{ delay: i * 0.1 }}
               className={`relative flex flex-col rounded-3xl border p-8 ${
                 plan.highlight
-                  ? "bg-primary/10 border-primary/50 shadow-[0_0_40px_rgba(168,85,247,0.15)]"
+                  ? "bg-primary/10 border-primary/50 shadow-[0_0_40px_rgba(0,255,136,0.1)]"
                   : "bg-card border-border"
               }`}
             >
@@ -118,7 +118,7 @@ export function Pricing() {
               <Button
                 asChild
                 variant={plan.highlight ? "default" : "outline"}
-                className={`w-full rounded-full font-semibold ${plan.highlight ? "shadow-[0_0_20px_rgba(168,85,247,0.3)]" : ""}`}
+                className={`w-full rounded-full font-semibold ${plan.highlight ? "shadow-[0_0_20px_rgba(0,255,136,0.2)]" : ""}`}
               >
                 <a href="#contact">
                   <Zap size={16} className="mr-2" />

@@ -67,7 +67,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* SPACE THEME */
+/* DARK THEME */
 :root {
   --button-outline: rgba(0,0,0, .10);
   --badge-outline: rgba(0,0,0, .05);
@@ -77,40 +77,40 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 230 35% 4%;
-  --foreground: 210 40% 96%;
-  --border: 230 20% 16%;
-  --card: 230 30% 7%;
-  --card-foreground: 210 40% 96%;
-  --card-border: 230 20% 16%;
-  --sidebar: 230 30% 7%;
-  --sidebar-foreground: 210 40% 96%;
-  --sidebar-border: 230 20% 16%;
-  --sidebar-primary: 270 80% 70%;
-  --sidebar-primary-foreground: 270 20% 10%;
-  --sidebar-accent: 270 80% 70%;
-  --sidebar-accent-foreground: 270 20% 10%;
-  --sidebar-ring: 270 80% 70%;
-  --popover: 230 30% 7%;
-  --popover-foreground: 210 40% 96%;
-  --popover-border: 230 20% 16%;
-  --primary: 270 80% 70%;
-  --primary-foreground: 270 20% 10%;
-  --secondary: 195 100% 60%;
-  --secondary-foreground: 230 35% 4%;
-  --muted: 230 25% 14%;
-  --muted-foreground: 220 15% 55%;
-  --accent: 270 80% 70%;
-  --accent-foreground: 270 20% 10%;
+  --background: 240 30% 3%;
+  --foreground: 60 14% 97%;
+  --border: 240 10% 14%;
+  --card: 240 20% 6%;
+  --card-foreground: 60 14% 97%;
+  --card-border: 240 10% 14%;
+  --sidebar: 240 20% 6%;
+  --sidebar-foreground: 60 14% 97%;
+  --sidebar-border: 240 10% 14%;
+  --sidebar-primary: 151 100% 50%;
+  --sidebar-primary-foreground: 240 30% 3%;
+  --sidebar-accent: 151 100% 50%;
+  --sidebar-accent-foreground: 240 30% 3%;
+  --sidebar-ring: 151 100% 50%;
+  --popover: 240 20% 6%;
+  --popover-foreground: 60 14% 97%;
+  --popover-border: 240 10% 14%;
+  --primary: 151 100% 50%;
+  --primary-foreground: 240 30% 3%;
+  --secondary: 220 100% 50%;
+  --secondary-foreground: 60 14% 97%;
+  --muted: 240 20% 12%;
+  --muted-foreground: 240 5% 55%;
+  --accent: 151 100% 50%;
+  --accent-foreground: 240 30% 3%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
-  --input: 230 20% 20%;
-  --ring: 270 80% 70%;
-  --chart-1: 270 80% 70%;
-  --chart-2: 195 100% 60%;
-  --chart-3: 320 80% 65%;
+  --input: 240 10% 18%;
+  --ring: 151 100% 50%;
+  --chart-1: 151 100% 50%;
+  --chart-2: 220 100% 50%;
+  --chart-3: 280 80% 60%;
   --chart-4: 30 90% 60%;
-  --chart-5: 160 70% 50%;
+  --chart-5: 330 80% 60%;
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: Georgia, serif;
@@ -151,40 +151,40 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 230 35% 4%;
-  --foreground: 210 40% 96%;
-  --border: 230 20% 16%;
-  --card: 230 30% 7%;
-  --card-foreground: 210 40% 96%;
-  --card-border: 230 20% 16%;
-  --sidebar: 230 30% 7%;
-  --sidebar-foreground: 210 40% 96%;
-  --sidebar-border: 230 20% 16%;
-  --sidebar-primary: 270 80% 70%;
-  --sidebar-primary-foreground: 270 20% 10%;
-  --sidebar-accent: 270 80% 70%;
-  --sidebar-accent-foreground: 270 20% 10%;
-  --sidebar-ring: 270 80% 70%;
-  --popover: 230 30% 7%;
-  --popover-foreground: 210 40% 96%;
-  --popover-border: 230 20% 16%;
-  --primary: 270 80% 70%;
-  --primary-foreground: 270 20% 10%;
-  --secondary: 195 100% 60%;
-  --secondary-foreground: 230 35% 4%;
-  --muted: 230 25% 14%;
-  --muted-foreground: 220 15% 55%;
-  --accent: 270 80% 70%;
-  --accent-foreground: 270 20% 10%;
+  --background: 240 30% 3%;
+  --foreground: 60 14% 97%;
+  --border: 240 10% 14%;
+  --card: 240 20% 6%;
+  --card-foreground: 60 14% 97%;
+  --card-border: 240 10% 14%;
+  --sidebar: 240 20% 6%;
+  --sidebar-foreground: 60 14% 97%;
+  --sidebar-border: 240 10% 14%;
+  --sidebar-primary: 151 100% 50%;
+  --sidebar-primary-foreground: 240 30% 3%;
+  --sidebar-accent: 151 100% 50%;
+  --sidebar-accent-foreground: 240 30% 3%;
+  --sidebar-ring: 151 100% 50%;
+  --popover: 240 20% 6%;
+  --popover-foreground: 60 14% 97%;
+  --popover-border: 240 10% 14%;
+  --primary: 151 100% 50%;
+  --primary-foreground: 240 30% 3%;
+  --secondary: 220 100% 50%;
+  --secondary-foreground: 60 14% 97%;
+  --muted: 240 20% 12%;
+  --muted-foreground: 240 5% 55%;
+  --accent: 151 100% 50%;
+  --accent-foreground: 240 30% 3%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
-  --input: 230 20% 20%;
-  --ring: 270 80% 70%;
-  --chart-1: 270 80% 70%;
-  --chart-2: 195 100% 60%;
-  --chart-3: 320 80% 65%;
+  --input: 240 10% 18%;
+  --ring: 151 100% 50%;
+  --chart-1: 151 100% 50%;
+  --chart-2: 220 100% 50%;
+  --chart-3: 280 80% 60%;
   --chart-4: 30 90% 60%;
-  --chart-5: 160 70% 50%;
+  --chart-5: 330 80% 60%;
 }
 
 @layer base {
@@ -221,12 +221,12 @@
 .grid-bg {
   background-size: 40px 40px;
   background-image:
-    linear-gradient(to right, rgba(168, 85, 247, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(168, 85, 247, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
 .glow-hover:hover {
-  box-shadow: 0 0 30px 0 rgba(168, 85, 247, 0.25);
+  box-shadow: 0 0 30px 0 rgba(0, 255, 136, 0.15);
 }
 
 /**
