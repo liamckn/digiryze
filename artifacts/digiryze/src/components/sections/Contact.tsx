@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { motion } from "framer-motion";
-import { Phone, MapPin, Clock, Send, Mail } from "lucide-react";
+import { Phone, MapPin, Clock, Send, Mail, ShieldCheck } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -71,9 +71,24 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-background relative overflow-hidden">
-      <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute left-0 top-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
+
+        {/* Urgency banner */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex items-center justify-center gap-3 mb-12 py-3 px-6 rounded-2xl bg-primary/10 border border-primary/20 max-w-2xl mx-auto"
+        >
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse flex-shrink-0" />
+          <p className="text-sm font-semibold text-primary text-center">
+            ⚡ Seulement <strong>3 créneaux disponibles</strong> ce mois — Réservez votre place maintenant
+          </p>
+        </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
           {/* Info Side */}
@@ -124,6 +139,15 @@ export function Contact() {
                   <p className="text-sm text-muted-foreground">Réactivité</p>
                   <p className="text-xl font-bold text-foreground">Délai de réponse sous 2h</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Guarantee block */}
+            <div className="mt-10 p-5 rounded-2xl bg-card border border-border flex items-start gap-4">
+              <ShieldCheck size={28} className="text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-foreground mb-1">Garantie satisfaction 30 jours</p>
+                <p className="text-sm text-muted-foreground">Si vous n'êtes pas satisfait du rendu dans les 30 jours, nous corrigeons gratuitement. Aucun risque pour vous.</p>
               </div>
             </div>
           </div>
@@ -243,6 +267,10 @@ export function Contact() {
                     <>Envoyer la demande <Send className="ml-2 h-4 w-4" /></>
                   )}
                 </Button>
+
+                <p className="text-xs text-center text-muted-foreground">
+                  🔒 Vos données sont confidentielles. Réponse garantie sous 2h.
+                </p>
               </form>
             </Form>
           </motion.div>

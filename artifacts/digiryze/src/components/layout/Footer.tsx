@@ -26,7 +26,7 @@ export function Footer() {
       <div className="md:hidden fixed bottom-6 right-6 z-50">
         <a 
           href="tel:0651813116" 
-          className="flex items-center justify-center w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-[0_0_20px_rgba(0,255,136,0.4)] transition-transform active:scale-95"
+          className="flex items-center justify-center w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-[0_0_25px_rgba(168,85,247,0.5)] transition-transform active:scale-95"
           data-testid="fab-call"
         >
           <Phone size={24} />

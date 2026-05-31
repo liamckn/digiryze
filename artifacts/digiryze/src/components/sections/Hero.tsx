@@ -1,14 +1,21 @@
 import { motion } from "framer-motion";
-import { Mail, Zap, Clock, ShieldCheck } from "lucide-react";
+import { Mail, Rocket, Clock, ShieldCheck, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { StarField } from "@/components/ui/StarField";
 
 export function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Background */}
-      <div className="absolute inset-0 z-0 grid-bg opacity-30" />
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[100px] mix-blend-screen animate-pulse" style={{ animationDelay: "2s" }} />
+      {/* Starfield */}
+      <StarField />
+
+      {/* Cosmic grid */}
+      <div className="absolute inset-0 z-0 grid-bg opacity-40" />
+
+      {/* Nebula glow blobs */}
+      <div className="absolute top-1/4 left-1/4 w-[600px] h-[500px] bg-primary/15 rounded-full blur-[140px] mix-blend-screen animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[120px] mix-blend-screen animate-pulse" style={{ animationDelay: "2s" }} />
+      <div className="absolute top-1/2 right-1/3 w-[300px] h-[300px] rounded-full blur-[100px] mix-blend-screen animate-pulse" style={{ background: "rgba(236,72,153,0.12)", animationDelay: "4s" }} />
 
       <div className="container relative z-10 px-4 md:px-6 mx-auto flex flex-col items-center text-center">
         <motion.div
@@ -18,19 +25,30 @@ export function Hero() {
           className="max-w-4xl"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-6">
-            <Zap size={16} />
+            <Rocket size={16} />
             <span>Agence Web & SEO — Marseille</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.1] tracking-tighter mb-6 uppercase">
-            <span className="block text-stroke opacity-50">VOTRE SITE EN</span>
-            <span className="block text-primary drop-shadow-[0_0_15px_rgba(0,255,136,0.3)]">48 HEURES</span>
+            <span className="block text-stroke opacity-40">VOTRE SITE EN</span>
+            <span className="block text-primary drop-shadow-[0_0_30px_rgba(168,85,247,0.6)]">48 HEURES</span>
             <span className="block">CHRONO.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto">
             Digiryze propulse votre activité locale. Conception sur mesure et référencement ultra-optimisé. On livre vite, on livre bien.
           </p>
+
+          {/* Urgency bar */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm text-primary font-semibold mb-8"
+          >
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            ⚡ Seulement 3 créneaux disponibles ce mois — places limitées
+          </motion.div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" variant="ghost" className="rounded-full px-8 h-14 text-base font-semibold w-full sm:w-auto hover:text-primary hover:bg-transparent" asChild data-testid="hero-cta-phone">
@@ -58,7 +76,7 @@ export function Hero() {
             { icon: ShieldCheck, title: "100% Satisfaction", desc: "Design sur mesure" },
             { icon: Zap, title: "Réponse 2H", desc: "Support réactif" }
           ].map((stat, i) => (
-            <div key={i} className="flex items-center gap-4 bg-card/50 backdrop-blur-sm border border-border/50 p-4 rounded-2xl">
+            <div key={i} className="flex items-center gap-4 bg-card/60 backdrop-blur-sm border border-border/50 p-4 rounded-2xl">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                 <stat.icon size={24} />
               </div>
