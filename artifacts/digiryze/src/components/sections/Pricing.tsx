@@ -1,53 +1,39 @@
 import { motion } from "framer-motion";
-import { Check, Star, Zap } from "lucide-react";
+import { Check, Zap, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const plans = [
   {
-    name: "Essentiel",
-    tagline: "Pour démarrer vite",
-    price: "490",
-    unit: "une fois",
+    name: "Création de site web",
+    tagline: "Paiement unique",
+    price: "299",
+    cents: ".99",
+    unit: "€ une fois",
     highlight: false,
     badge: null,
     features: [
-      "Site vitrine 3 pages",
-      "Design sur mesure",
-      "100% Mobile-first",
-      "Livraison en 48h",
+      "Site vitrine sur mesure",
+      "Design premium mobile-first",
+      "Livraison en 48h chrono",
       "Hébergement 1 an offert",
+      "Formulaire de contact",
       "1 mois de support inclus",
     ],
   },
   {
-    name: "Pro",
-    tagline: "Le plus populaire",
-    price: "890",
-    unit: "une fois",
-    highlight: true,
-    badge: "⭐ Recommandé",
-    features: [
-      "Site web jusqu'à 8 pages",
-      "Design premium sur mesure",
-      "SEO on-page complet",
-      "Google My Business optimisé",
-      "Livraison en 48h",
-      "3 mois de suivi SEO offerts",
-    ],
-  },
-  {
-    name: "Premium",
-    tagline: "Croissance continue",
-    price: "199",
+    name: "Référencement SEO",
+    tagline: "Abonnement mensuel",
+    price: "75",
+    cents: "€",
     unit: "/ mois",
-    highlight: false,
-    badge: null,
+    highlight: true,
+    badge: "⭐ Le plus populaire",
     features: [
-      "Site web illimité",
-      "SEO mensuel avancé",
-      "Maintenance & mises à jour",
-      "Rapports de performance",
-      "Support prioritaire",
+      "Optimisation Google My Business",
+      "Balises SEO on-page",
+      "Annuaires locaux",
+      "Suivi de positionnement",
+      "Rapport mensuel",
       "Sans engagement",
     ],
   },
@@ -77,7 +63,7 @@ export function Pricing() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -99,10 +85,11 @@ export function Pricing() {
 
               <div className="mb-6">
                 <p className="text-sm text-muted-foreground mb-1">{plan.tagline}</p>
-                <h3 className="text-2xl font-display font-bold text-foreground mb-4">{plan.name}</h3>
-                <div className="flex items-end gap-1">
-                  <span className="text-5xl font-display font-bold text-foreground">{plan.price}€</span>
-                  <span className="text-muted-foreground mb-1">{plan.unit}</span>
+                <h3 className="text-xl font-display font-bold text-foreground mb-4">{plan.name}</h3>
+                <div className="flex items-end gap-0.5">
+                  <span className="text-5xl font-display font-bold text-foreground">{plan.price}</span>
+                  <span className="text-2xl font-display font-bold text-foreground mb-0.5">{plan.cents}</span>
+                  <span className="text-muted-foreground mb-1 ml-1">{plan.unit}</span>
                 </div>
               </div>
 
@@ -135,7 +122,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="text-center text-sm text-muted-foreground mt-10"
         >
-          ✓ Devis gratuit sous 24h &nbsp;·&nbsp; ✓ Aucun engagement &nbsp;·&nbsp; ✓ Satisfaction garantie
+          ✓ Devis gratuit sous 24h &nbsp;·&nbsp; ✓ Sans engagement &nbsp;·&nbsp; ✓ Satisfaction garantie
         </motion.p>
       </div>
     </section>
