@@ -40,7 +40,7 @@ const plans = [
   {
     name: "SEO seul",
     tagline: "Abonnement mensuel",
-    price: "50€",
+    price: "75€",
     unit: "/ mois",
     sub: "sans engagement",
     highlight: false,
