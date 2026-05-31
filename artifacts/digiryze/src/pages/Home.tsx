@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Marquee } from "@/components/sections/Marquee";
 import { Services } from "@/components/sections/Services";
-import { Pricing } from "@/components/sections/Pricing";
 import { Process } from "@/components/sections/Process";
 import { WhyDigiryze } from "@/components/sections/WhyDigiryze";
 import { FAQ } from "@/components/sections/FAQ";
@@ -20,7 +19,6 @@ export function Home() {
         <Hero />
         <Marquee />
         <Services />
-        <Pricing />
         <WhyDigiryze />
         <Process />
         <FAQ />

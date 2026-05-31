@@ -8,14 +8,12 @@ export function Services() {
       icon: MonitorSmartphone,
       title: "Création de site web",
       description: "Site vitrine, landing page, site médical ou commercial. Design sur mesure, mobile-first, livré en 48h.",
-      price: "À partir de 490€",
       badge: "Livraison 48h",
     },
     {
       icon: Search,
       title: "Référencement SEO",
       description: "Optimisation Google My Business, balises SEO, annuaires locaux. Apparaissez en premier sur Google.",
-      price: "À partir de 199€/mois",
       badge: "Résultats en 30 jours",
     },
   ];
@@ -55,8 +53,7 @@ export function Services() {
               </div>
               <h3 className="text-2xl font-display font-bold text-foreground mb-3 relative z-10">{service.title}</h3>
               <p className="text-muted-foreground relative z-10 mb-6">{service.description}</p>
-              <div className="flex items-center justify-between relative z-10">
-                <span className="text-xl font-display font-bold text-primary">{service.price}</span>
+              <div className="flex items-center justify-end relative z-10">
                 <Button asChild variant="ghost" size="sm" className="text-muted-foreground hover:text-primary group-hover:text-primary transition-colors">
                   <a href="#contact">
                     Démarrer <ArrowRight size={16} className="ml-1" />
