@@ -36,17 +36,37 @@ export function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
+    if (!formspreeId) {
+      toast({ title: "Configuration manquante", description: "L'ID Formspree n'est pas encore configuré.", variant: "destructive" });
+      return;
+    }
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Demande envoyée !",
-        description: "Nous vous recontacterons sous 2h.",
+    try {
+      const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          prenom: values.firstName,
+          nom: values.lastName,
+          email: values.email,
+          telephone: values.phone,
+          service: values.service,
+          projet: values.project,
+        }),
       });
-      form.reset();
-    }, 1000);
+      if (res.ok) {
+        toast({ title: "Demande envoyée !", description: "Nous vous recontacterons sous 2h." });
+        form.reset();
+      } else {
+        throw new Error();
+      }
+    } catch {
+      toast({ title: "Erreur d'envoi", description: "Veuillez réessayer ou nous appeler directement.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
