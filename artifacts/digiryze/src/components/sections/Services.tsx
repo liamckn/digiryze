@@ -19,11 +19,11 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-background relative overflow-hidden">
+    <section id="services" className="py-14 bg-background relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="mb-16">
+        <div className="mb-10">
           <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight text-foreground mb-4">
             Nos <span className="text-primary">Services</span>
           </h2>
@@ -32,7 +32,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {services.map((service, index) => (
             <motion.div
               key={index}

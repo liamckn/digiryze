@@ -9,9 +9,9 @@ export function Process() {
   ];
 
   return (
-    <section id="process" className="py-24 bg-card relative">
+    <section id="process" className="py-14 bg-card relative">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight text-center mb-10">
           La <span className="text-stroke opacity-70">Méthode</span> <span className="text-primary">Digiryze</span>
         </h2>
 

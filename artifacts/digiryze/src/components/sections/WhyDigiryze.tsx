@@ -16,7 +16,7 @@ export function WhyDigiryze() {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-14 bg-background relative overflow-hidden">
       {/* Decorative Glow */}
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[150px] -translate-y-1/2 pointer-events-none" />
 

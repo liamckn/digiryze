@@ -58,7 +58,7 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-background relative overflow-hidden">
+    <section id="pricing" className="py-14 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -66,7 +66,7 @@ export function Pricing() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-4">
             <Star size={14} />

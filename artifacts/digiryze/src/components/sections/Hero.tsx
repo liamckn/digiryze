@@ -3,7 +3,7 @@ import { Mail, Rocket, Clock, ShieldCheck, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 export function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[85dvh] flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0 grid-bg opacity-30" />
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" />
@@ -61,7 +61,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl"
+          className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl"
         >
           {[
             { icon: Clock, title: "48H Livraison", desc: "Mise en ligne éclair" },

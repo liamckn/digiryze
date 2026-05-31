@@ -10,7 +10,7 @@ export function Marquee() {
   const repeated = [...items, ...items, ...items, ...items];
 
   return (
-    <div className="w-full bg-primary py-4 overflow-hidden border-y border-primary/20 my-10">
+    <div className="w-full bg-primary py-4 overflow-hidden border-y border-primary/20">
       <div className="flex animate-marquee" style={{ width: "max-content" }}>
         {repeated.map((item, i) => (
           <span

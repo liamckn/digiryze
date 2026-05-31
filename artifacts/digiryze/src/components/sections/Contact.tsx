@@ -70,7 +70,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-background relative overflow-hidden">
+    <section id="contact" className="py-14 bg-background relative overflow-hidden">
       <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute left-0 top-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
       
@@ -81,7 +81,7 @@ export function Contact() {
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-3 mb-12 py-3 px-6 rounded-2xl bg-primary/10 border border-primary/20 max-w-2xl mx-auto"
+          className="flex items-center justify-center gap-3 mb-8 py-3 px-6 rounded-2xl bg-primary/10 border border-primary/20 max-w-2xl mx-auto"
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse flex-shrink-0" />
           <p className="text-sm font-semibold text-primary text-center">
