@@ -21,7 +21,8 @@ jobs:
 
       - name: Build
         run: pnpm build
-        working-directory: artifacts/digiryze env:
+        working-directory: artifacts/digiryze
+        env:
           PORT: 3000
 
       - name: Deploy
