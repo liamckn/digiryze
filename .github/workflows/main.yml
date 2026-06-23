@@ -24,6 +24,7 @@ jobs:
         working-directory: artifacts/digiryze
         env:
           PORT: 3000
+          BASE_PATH: /
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
