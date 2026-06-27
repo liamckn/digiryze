@@ -37,17 +37,16 @@ export function Contact() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
-    if (!formspreeId) {
-      toast({ title: "Configuration manquante", description: "L'ID Formspree n'est pas encore configuré.", variant: "destructive" });
-      return;
-    }
     setIsSubmitting(true);
     try {
-      const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: `Nouvelle demande de devis - ${values.firstName} ${values.lastName}`,
+          from_name: "Digiryze Site",
+          to: "contact.digiryze@gmail.com",
           prenom: values.firstName,
           nom: values.lastName,
           email: values.email,
@@ -56,11 +55,12 @@ export function Contact() {
           projet: values.project,
         }),
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (data.success) {
         toast({ title: "Demande envoyée !", description: "Nous vous recontacterons sous 2h." });
         form.reset();
       } else {
-        throw new Error();
+        throw new Error(data.message || "Erreur");
       }
     } catch {
       toast({ title: "Erreur d'envoi", description: "Veuillez réessayer ou nous appeler directement.", variant: "destructive" });
@@ -263,7 +263,7 @@ export function Contact() {
                 />
 
                 <Button type="submit" size="lg" className="w-full font-bold glow-hover" disabled={isSubmitting} data-testid="contact-submit">
-                  {isSubmitting ? "Envoi..." : (
+                  {isSubmitting ? "Envoi en cours..." : (
                     <>Envoyer la demande <Send className="ml-2 h-4 w-4" /></>
                   )}
                 </Button>

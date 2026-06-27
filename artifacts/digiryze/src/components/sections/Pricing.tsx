@@ -6,9 +6,6 @@ const plans = [
   {
     name: "Site web",
     tagline: "Paiement unique",
-    price: "299,99€",
-    unit: "",
-    sub: "paiement unique",
     highlight: false,
     badge: null,
     features: [
@@ -23,9 +20,6 @@ const plans = [
   {
     name: "Site + SEO",
     tagline: "L'offre complète",
-    price: "299,99€",
-    unit: "+ 50€/mois",
-    sub: "site + référencement mensuel",
     highlight: true,
     badge: "⭐ Recommandé",
     features: [
@@ -40,9 +34,6 @@ const plans = [
   {
     name: "SEO seul",
     tagline: "Abonnement mensuel",
-    price: "75€",
-    unit: "/ mois",
-    sub: "sans engagement",
     highlight: false,
     badge: null,
     features: [
@@ -70,13 +61,13 @@ export function Pricing() {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-4">
             <Star size={14} />
-            <span>Tarifs transparents</span>
+            <span>Nos offres</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight mb-4">
             Des offres <span className="text-primary">claires</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Aucune mauvaise surprise. Vous savez exactement ce que vous obtenez.
+            Demandez votre devis gratuit et personnalisé. Nous vous répondons sous 2h.
           </p>
         </motion.div>
 
@@ -102,12 +93,8 @@ export function Pricing() {
 
               <div className="mb-6">
                 <p className="text-sm text-muted-foreground mb-1">{plan.tagline}</p>
-                <h3 className="text-xl font-display font-bold text-foreground mb-4">{plan.name}</h3>
-                <div className="flex flex-wrap items-end gap-1">
-                  <span className="text-4xl font-display font-bold text-foreground leading-none">{plan.price}</span>
-                  {plan.unit && <span className="text-lg text-primary font-semibold mb-0.5">{plan.unit}</span>}
-                </div>
-                <p className="text-xs text-muted-foreground mt-1">{plan.sub}</p>
+                <h3 className="text-2xl font-display font-bold text-foreground mb-2">{plan.name}</h3>
+                <p className="text-sm text-primary font-medium">Devis sur mesure gratuit</p>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
@@ -126,7 +113,7 @@ export function Pricing() {
               >
                 <a href="#contact">
                   <Zap size={16} className="mr-2" />
-                  Démarrer maintenant
+                  Demander un devis
                 </a>
               </Button>
             </motion.div>
