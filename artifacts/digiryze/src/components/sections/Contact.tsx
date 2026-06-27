@@ -39,14 +39,10 @@ export function Contact() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("https://formspree.io/f/xlgvkzka", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
-          subject: `Nouvelle demande de devis - ${values.firstName} ${values.lastName}`,
-          from_name: "Digiryze Site",
-          to: "contact.digiryze@gmail.com",
           prenom: values.firstName,
           nom: values.lastName,
           email: values.email,
@@ -55,12 +51,11 @@ export function Contact() {
           projet: values.project,
         }),
       });
-      const data = await res.json();
-      if (data.success) {
+      if (res.ok) {
         toast({ title: "Demande envoyée !", description: "Nous vous recontacterons sous 2h." });
         form.reset();
       } else {
-        throw new Error(data.message || "Erreur");
+        throw new Error();
       }
     } catch {
       toast({ title: "Erreur d'envoi", description: "Veuillez réessayer ou nous appeler directement.", variant: "destructive" });
