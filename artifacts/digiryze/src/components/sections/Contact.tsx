@@ -39,9 +39,9 @@ export function Contact() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      const res = await fetch("https://formspree.io/f/xlgvkzka", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           prenom: values.firstName,
           nom: values.lastName,
@@ -51,11 +51,12 @@ export function Contact() {
           projet: values.project,
         }),
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (res.ok && data.success) {
         toast({ title: "Demande envoyée !", description: "Nous vous recontacterons sous 2h." });
         form.reset();
       } else {
-        throw new Error();
+        throw new Error(data.error || "Erreur");
       }
     } catch {
       toast({ title: "Erreur d'envoi", description: "Veuillez réessayer ou nous appeler directement.", variant: "destructive" });
