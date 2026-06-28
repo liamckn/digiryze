@@ -1,18 +1,15 @@
-import { lazy, Suspense } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { Marquee } from "@/components/sections/Marquee";
+import { Services } from "@/components/sections/Services";
+import { Pricing } from "@/components/sections/Pricing";
+import { Process } from "@/components/sections/Process";
+import { WhyDigiryze } from "@/components/sections/WhyDigiryze";
+import { FAQ } from "@/components/sections/FAQ";
+import { Contact } from "@/components/sections/Contact";
 import { CustomCursor } from "@/components/ui/CustomCursor";
-
-// Lazy-load everything below the fold
-const Marquee = lazy(() => import("@/components/sections/Marquee").then(m => ({ default: m.Marquee })));
-const Services = lazy(() => import("@/components/sections/Services").then(m => ({ default: m.Services })));
-const Pricing = lazy(() => import("@/components/sections/Pricing").then(m => ({ default: m.Pricing })));
-const WhyDigiryze = lazy(() => import("@/components/sections/WhyDigiryze").then(m => ({ default: m.WhyDigiryze })));
-const Process = lazy(() => import("@/components/sections/Process").then(m => ({ default: m.Process })));
-const FAQ = lazy(() => import("@/components/sections/FAQ").then(m => ({ default: m.FAQ })));
-const Contact = lazy(() => import("@/components/sections/Contact").then(m => ({ default: m.Contact })));
-const Chatbot = lazy(() => import("@/components/ui/Chatbot").then(m => ({ default: m.Chatbot })));
+import { Chatbot } from "@/components/ui/Chatbot";
 
 export function Home() {
   return (
@@ -21,20 +18,16 @@ export function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Suspense fallback={null}>
-          <Marquee />
-          <Services />
-          <Pricing />
-          <WhyDigiryze />
-          <Process />
-          <FAQ />
-          <Contact />
-        </Suspense>
+        <Marquee />
+        <Services />
+        <Pricing />
+        <WhyDigiryze />
+        <Process />
+        <FAQ />
+        <Contact />
       </main>
       <Footer />
-      <Suspense fallback={null}>
-        <Chatbot />
-      </Suspense>
+      <Chatbot />
     </div>
   );
 }
