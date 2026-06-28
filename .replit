@@ -40,13 +40,13 @@ outputType = "console"
 name = "Digiryze"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "PORT=23381 BASE_PATH=/ pnpm --filter @workspace/digiryze run dev"
-waitForPort = 23381
-
 [workflows.workflow.metadata]
 outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "PORT=23381 BASE_PATH=/ pnpm --filter @workspace/digiryze run serve"
+waitForPort = 23381
 
 [agent]
 stack = "PNPM_WORKSPACE"
