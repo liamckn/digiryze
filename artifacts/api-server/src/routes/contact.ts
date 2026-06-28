@@ -60,7 +60,7 @@ router.post("/contact", async (req, res) => {
 
     res.json({ success: true });
   } catch (err) {
-    console.error("Email send error:", err);
+    req.log.error({ err }, "Email send error");
     res.status(500).json({ error: "Échec d'envoi de l'email" });
   }
 });

@@ -37,11 +37,17 @@ export function Contact() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    const formspreeId = import.meta.env.VITE_FORMSPREE_ID as string | undefined;
+    if (!formspreeId) {
+      toast({ title: "Erreur de configuration", description: "Veuillez nous contacter directement par téléphone.", variant: "destructive" });
+      return;
+    }
+
     setIsSubmitting(true);
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
           prenom: values.firstName,
           nom: values.lastName,
@@ -51,12 +57,18 @@ export function Contact() {
           projet: values.project,
         }),
       });
-      const data = await res.json();
-      if (res.ok && data.success) {
+
+      let data: Record<string, unknown> = {};
+      const contentType = res.headers.get("content-type") ?? "";
+      if (contentType.includes("application/json")) {
+        data = await res.json() as Record<string, unknown>;
+      }
+
+      if (res.ok) {
         toast({ title: "Demande envoyée !", description: "Nous vous recontacterons sous 2h." });
         form.reset();
       } else {
-        throw new Error(data.error || "Erreur");
+        throw new Error(typeof data.error === "string" ? data.error : "Erreur");
       }
     } catch {
       toast({ title: "Erreur d'envoi", description: "Veuillez réessayer ou nous appeler directement.", variant: "destructive" });
