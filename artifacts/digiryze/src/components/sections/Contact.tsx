@@ -37,11 +37,8 @@ export function Contact() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const formspreeId = import.meta.env.VITE_FORMSPREE_ID as string | undefined;
-    if (!formspreeId) {
-      toast({ title: "Erreur de configuration", description: "Veuillez nous contacter directement par téléphone.", variant: "destructive" });
-      return;
-    }
+    const formspreeId = (import.meta.env.VITE_FORMSPREE_ID as string | undefined) ?? "xlgvkzka";
+
 
     setIsSubmitting(true);
     try {
